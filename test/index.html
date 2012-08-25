@@ -20,16 +20,15 @@
 
         # now create a new animation
         animator = new Animator
-        ani = animator.add "myCanvas", "/test/flames.json", "/test/flames.png"
-        ani.onready ->
-          @canvasContext.drawImage @img, 0,0
-          
 
-
+        # build 3 animations with different play speeds
+        animator.add "myCanvas", "/test/flames.json", "/test/flames.png", 0.5
+        animator.add "myCanvas2", "/test/flames.json", "/test/flames.png", 1.5
+        animator.add "myCanvas3", "/test/flames.json", "/test/flames.png", 3.5
 
   </script>
   <style>
-    #myCanvas { 
+    #canvas canvas { 
       border: 1px solid black;
     }
     section h2 { 
@@ -50,8 +49,15 @@
   <h1>Animator Demo</h1>
 
   <section id="canvas">
-    <h2>Canvas</h2>
+    <h2>Canvas Animation Demos</h2>
     <canvas id="myCanvas" width="200" height="200"></canvas>
+    <p>0.5 second loop</p>
+
+    <canvas id="myCanvas2" width="200" height="200"></canvas>
+    <p>3.5 second loop</p>
+
+    <canvas id="myCanvas3" width="200" height="200"></canvas>
+    <p>5.5 second loop</p>
   </section>
 
   <section id="code">
