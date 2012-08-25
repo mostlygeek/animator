@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script src="http://coffeescript.org/extras/coffee-script.js"></script>
+  <script src="/animator.coffee" type="text/coffeescript" id="animatorSource"></script>
+  <script type="text/coffeescript">
+    # this bit of coffeescript will load up the animator.coffee file, compile it
+    # and show it in... makes development a bit easier :)
+    http = new XMLHttpRequest
+    http.open "GET", "/animator.coffee", true
+    http.send null
+    http.onreadystatechange = (event)->
+        t = event.currentTarget
+        return unless t.readyState == 4
+
+        pre = document.getElementById "source"
+        compiled = CoffeeScript.compile t.responseText
+        pre.innerHTML = compiled
+
+        # now create a new animation
+        animator = new Animator
+        ani = animator.add "myCanvas", "/test/flames.json", "/test/flames.png"
+        ani.onready ->
+          @canvasContext.drawImage @img, 0,0
+          
+
+
+
+  </script>
+  <style>
+    #myCanvas { 
+      border: 1px solid black;
+    }
+    section h2 { 
+      padding: 0.25em;
+    }
+    #code {
+    }
+    #code pre {
+      background-color: #C0C0C0;
+      padding: 1em;
+    }
+    #canvas {
+    }
+  </style>
+  <title></title>
+</head>
+<body>
+  <h1>Animator Demo</h1>
+
+  <section id="canvas">
+    <h2>Canvas</h2>
+    <canvas id="myCanvas" width="200" height="200"></canvas>
+  </section>
+
+  <section id="code">
+    <h2>Compiled Animator.coffee</h2>
+    <pre id="source"></pre>
+  </section>
+  
+
+  
+</body>
+</html>
