@@ -85,11 +85,8 @@ class Animator
         # initialize the queue
         @queue = []
         
-        # make a closure for the queue so the animateFn never loses it
-        closureQueue = @queue
-        # create a closure around queue
-        animateFn = (now)->
-            animation.draw(now) for animation in closureQueue
+        animateFn = (now) =>
+            animation.draw(now) for animation in @queue
 
             # loop it...
             window.requestAnimationFrame animateFn
