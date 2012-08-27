@@ -1,3 +1,34 @@
+# DOM ready
+# source: https://raw.github.com/gist/2477661/6f91e98d167d904e5f4b77743d8fe6dbe615938a/stuff.coffee
+window.ready ?= (fn) ->
+  fire = ->
+    unless window.ready.fired
+      window.ready.fired = true
+      fn()
+
+  return fire() if document.readyState is "complete"
+
+  # Mozilla, Opera, WebKit
+  if document.addEventListener
+    document.addEventListener "DOMContentLoaded", fire, false
+    window.addEventListener "load", fire, false
+
+  # IE
+  else if document.attachEvent
+    check = ->
+      try
+        # the IE hack to check if we can scroll... which fails if dom is not
+        # ready
+        document.documentElement.doScroll "left"
+      catch e
+        setTimeout check, 50
+        return
+      fire()
+    document.attachEvent "onreadystatechange", fire
+    window.attachEvent "onload", fire
+    check() if document.documentElement and document.documentElement.doScroll and !window.frameElement
+
+
 # polyfill for request animation time... 
 # credit: http://paulirish.com/2011/requestanimationframe-for-smart-animating/
 do ->
@@ -140,5 +171,9 @@ class Animator
 
     stop: (id) ->
 
-window.Animator = new Animator
+# automatically bind and run when the DOM is ready
+window.ready ->
+    ani = new Animator
+    window.Animator = ani
+    ani.init()
 

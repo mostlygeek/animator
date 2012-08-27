@@ -3,29 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <script src="/animator.js"></script>
-  <script type="text/coffeescript">
-    # this bit of coffeescript will load up the animator.coffee file, compile it
-    # and show it in... makes development a bit easier :)
-    http = new XMLHttpRequest
-    http.open "GET", "/animator.js", true
-    http.send null
-    http.onreadystatechange = (event)->
-        t = event.currentTarget
-        return unless t.readyState == 4
-
-        pre = document.getElementById "source"
-        compiled = CoffeeScript.compile t.responseText
-        pre.innerHTML = compiled
-
-        # now create a new animation
-        #animator = new Animator
-
-        # build 3 animations with different play speeds
-        #animator.add "myCanvas", "/test/flames.json", "/test/flames.png", 0.5
-        #animator.add "myCanvas2", "/test/flames.json", "/test/flames.png", 1.5
-        #animator.add "myCanvas3", "/test/flames.json", "/test/flames.png", 3.5
-
-  </script>
   <style>
     #canvas canvas { 
       border: 1px solid black;
@@ -54,6 +31,12 @@
       data-index="/test/flames.json" data-sprites="/test/flames.png"
       data-time="0.5"></canvas>
     <p>0.5 second loop</p>
+    
+    <canvas width="200" height="200"
+      class="Animator"
+      data-index="/test/flames.json" data-sprites="/test/flames.png"
+      data-time="1.5"></canvas>
+    <p>1.5 second loop</p>
 
     <canvas width="200" height="200"
       class="Animator"
@@ -68,12 +51,5 @@
     <p>5.5 second loop</p>
   </section>
 
-  <section id="code">
-    <h2>Compiled Animator.coffee</h2>
-    <pre id="source"></pre>
-  </section>
-
-  <script>Animator.init()</script>  
-  
 </body>
 </html>
