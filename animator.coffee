@@ -38,11 +38,10 @@ class Animation
     lastFrame: 0
     ready: false
 
-    # @id               - string
     # @canvasContext    - the 2D canvas context to draw this animation into
     # @time             - how long it takes to play all frames
     # @options          - options to control the animation 
-    constructor: (@id, @canvasContext, @time, @options) ->
+    constructor: (@canvasContext, @time) ->
         @startTime = Date.now()
         @lastFrame = 0
    
@@ -92,11 +91,25 @@ class Animator
             window.requestAnimationFrame animateFn
         
         window.requestAnimationFrame animateFn
-    
-    add: (id, jsonIndex, spriteImg, time=1.5, options={}) ->
-        ctx = document.getElementById(id)?.getContext "2d"
 
-        animation = new Animation(id, ctx, time, options)
+    init: ->
+        elements = document.querySelectorAll "canvas.Animator"
+        for element in elements
+            index   = element.getAttribute "data-index"
+            sprites = element.getAttribute "data-sprites"
+            time    = parseFloat(element.getAttribute("data-time"))
+            
+            @add(element, index, sprites, time)
+
+    
+    add: (element, jsonIndex, spriteImg, time) ->
+        # the animation object created here is bound to the element... 
+        # makes it easier to determine if we're adding the same thing over
+        return if element.animation?
+        
+        ctx = element.getContext "2d"
+
+        animation = new Animation(ctx, time)
 
         # attempt to fetch the Json Sprite index
         jXHR = new XMLHttpRequest
@@ -120,16 +133,12 @@ class Animator
             # if the index data is also ready...
             if index? 
                 animation.ready(index, img)
-     
-        found = false
-        for check in @queue
-            if check.id == animation.id
-                found = true
-                break
-
-        @queue.push animation unless found
+        
+        element.animation = animation
+        @queue.push animation
         return animation
 
     stop: (id) ->
 
-window.Animator = Animator
+window.Animator = new Animator
+

@@ -2,13 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <script src="http://coffeescript.org/extras/coffee-script.js"></script>
-  <script src="/animator.coffee" type="text/coffeescript" id="animatorSource"></script>
+  <script src="/animator.js"></script>
   <script type="text/coffeescript">
     # this bit of coffeescript will load up the animator.coffee file, compile it
     # and show it in... makes development a bit easier :)
     http = new XMLHttpRequest
-    http.open "GET", "/animator.coffee", true
+    http.open "GET", "/animator.js", true
     http.send null
     http.onreadystatechange = (event)->
         t = event.currentTarget
@@ -19,12 +18,12 @@
         pre.innerHTML = compiled
 
         # now create a new animation
-        animator = new Animator
+        #animator = new Animator
 
         # build 3 animations with different play speeds
-        animator.add "myCanvas", "/test/flames.json", "/test/flames.png", 0.5
-        animator.add "myCanvas2", "/test/flames.json", "/test/flames.png", 1.5
-        animator.add "myCanvas3", "/test/flames.json", "/test/flames.png", 3.5
+        #animator.add "myCanvas", "/test/flames.json", "/test/flames.png", 0.5
+        #animator.add "myCanvas2", "/test/flames.json", "/test/flames.png", 1.5
+        #animator.add "myCanvas3", "/test/flames.json", "/test/flames.png", 3.5
 
   </script>
   <style>
@@ -50,13 +49,22 @@
 
   <section id="canvas">
     <h2>Canvas Animation Demos</h2>
-    <canvas id="myCanvas" width="200" height="200"></canvas>
+    <canvas width="200" height="200"
+      class="Animator"
+      data-index="/test/flames.json" data-sprites="/test/flames.png"
+      data-time="0.5"></canvas>
     <p>0.5 second loop</p>
 
-    <canvas id="myCanvas2" width="200" height="200"></canvas>
+    <canvas width="200" height="200"
+      class="Animator"
+      data-index="/test/flames.json" data-sprites="/test/flames.png"
+      data-time="3.5"></canvas>
     <p>3.5 second loop</p>
 
-    <canvas id="myCanvas3" width="200" height="200"></canvas>
+    <canvas width="200" height="200"
+      class="Animator"
+      data-index="/test/flames.json" data-sprites="/test/flames.png"
+      data-time="5.5"></canvas>
     <p>5.5 second loop</p>
   </section>
 
@@ -64,8 +72,8 @@
     <h2>Compiled Animator.coffee</h2>
     <pre id="source"></pre>
   </section>
-  
 
+  <script>Animator.init()</script>  
   
 </body>
 </html>
