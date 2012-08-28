@@ -1,5 +1,5 @@
 ###
-# v0.0.1
+# v0.0.2
 # Copyright Futdut Games, Inc 2012
 ###
 
@@ -77,16 +77,33 @@ class Animation
     # @canvasContext    - the 2D canvas context to draw this animation into
     # @time             - how long it takes to play all frames
     # @options          - options to control the animation 
-    constructor: (@canvasContext, @time, @offsetX, @offsetY) ->
+    constructor: (indexURL, spriteURL, @canvasContext, @time, @offsetX, @offsetY) ->
         @startTime = Date.now()
         @lastFrame = 0
+
+        jXHR = new XMLHttpRequest
+        jXHR.open "GET", indexURL, true
+        jXHR.send null
+        jXHR.onreadystatechange = (event) =>
+            t = event.currentTarget
+            return unless t.readyState == 4 # done
+
+            @index = JSON.parse t.responseText
+            @ready() if @img?
+            
+        # attempt to fetch the spriteImg
+        img = new Image
+        img.src = spriteURL
+        img.onload = =>
+            @img = img
+            @ready() if @index? 
    
     # record a callback for when the animation is ready to go...
     onready: (fn) ->
         @readyFn = fn
 
     # provide the index/img and trigger that the animation is ready to go
-    ready: (@index, @img)->
+    ready: ->
         @frameCount = @index.frames.length
         @frameDelay = @time * 1000 / @frameCount  # how many ms each frame should be shown for
         @ready = true
@@ -130,6 +147,8 @@ class Animator
         
         window.requestAnimationFrame animateFn
 
+    # find all canvas tags w/ the animator class, parse out the options and bind
+    # the animation to it
     init: ->
         elements = document.querySelectorAll "canvas.Animator"
         for el in elements
@@ -141,10 +160,9 @@ class Animator
             offsetX = if dataX? then parseInt dataX else 0
             offsetY = if dataY? then parseInt dataY else 0
 
-            
             @add(el, index, sprites, time, offsetX, offsetY)
 
-    
+    # add an animation to a canvas tag 
     add: (element, jsonIndex, spriteImg, time, offsetX=0, offsetY=0) ->
         # the animation object created here is bound to the element... 
         # makes it easier to determine if we're adding the same thing over
@@ -152,30 +170,8 @@ class Animator
         
         ctx = element.getContext "2d"
 
-        animation = new Animation(ctx, time, offsetX, offsetY)
+        animation = new Animation(jsonIndex, spriteImg, ctx, time, offsetX, offsetY)
 
-        # attempt to fetch the Json Sprite index
-        jXHR = new XMLHttpRequest
-        jXHR.open "GET", jsonIndex, true
-        jXHR.send null
-        jXHR.onreadystatechange = (event) ->
-            t = event.currentTarget
-            return unless t.readyState == 4 # done
-
-            index = JSON.parse t.responseText
-            
-            # if we have our image ready... start the animation
-            if img?
-                animation.ready(index, img)
-
-            
-        # attempt to fetch the spriteImg
-        img = new Image
-        img.src = spriteImg
-        img.onload = ->
-            # if the index data is also ready...
-            if index? 
-                animation.ready(index, img)
         
         element.animation = animation
         @queue.push animation
@@ -188,4 +184,3 @@ window.ready ->
     ani = new Animator
     window.Animator = ani
     ani.init()
-
