@@ -1,3 +1,8 @@
+###
+# v0.0.1
+# Copyright Futdut Games, Inc 2012
+###
+
 # DOM ready
 # source: https://raw.github.com/gist/2477661/6f91e98d167d904e5f4b77743d8fe6dbe615938a/stuff.coffee
 window.ready ?= (fn) ->
