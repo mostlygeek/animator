@@ -1,5 +1,5 @@
 ###
-# v0.0.2
+# v0.0.3
 # Copyright Futdut Games, Inc 2012
 ###
 
@@ -152,15 +152,19 @@ class Animator
     init: ->
         elements = document.querySelectorAll "canvas.Animator"
         for el in elements
-            index   = el.getAttribute "data-index"
-            sprites = el.getAttribute "data-sprites"
-            time    = parseFloat(el.getAttribute("data-time"))
-            dataX = el.getAttribute("data-x")
-            dataY = el.getAttribute("data-y")
+            dataIndex   = el.getAttribute "data-index"
+            dataSprites = el.getAttribute "data-sprites"
+
+            dataX       = el.getAttribute "data-x"
+            dataY       = el.getAttribute "data-y"
+            dataTime    = el.getAttribute "data-time"
+            
+            time    = if dataTime? then parseFloat dataTime else 1.0
             offsetX = if dataX? then parseInt dataX else 0
             offsetY = if dataY? then parseInt dataY else 0
-
-            @add(el, index, sprites, time, offsetX, offsetY)
+            
+            if dataIndex? and dataSprites? 
+                @add(el, dataIndex, dataSprites, time, offsetX, offsetY)
 
     # add an animation to a canvas tag 
     add: (element, jsonIndex, spriteImg, time, offsetX=0, offsetY=0) ->
