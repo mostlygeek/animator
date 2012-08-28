@@ -1,0 +1,404 @@
+{"frames": [
+
+{
+	"filename": "Smoke.swf/0000",
+	"frame": {"x":452,"y":380,"w":62,"h":190},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":64,"y":0,"w":62,"h":190},
+	"sourceSize": {"w":62,"h":190}
+},
+{
+	"filename": "Smoke.swf/0001",
+	"frame": {"x":294,"y":576,"w":64,"h":192},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":64,"y":0,"w":64,"h":192},
+	"sourceSize": {"w":64,"h":192}
+},
+{
+	"filename": "Smoke.swf/0002",
+	"frame": {"x":232,"y":384,"w":64,"h":192},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":67,"y":0,"w":64,"h":192},
+	"sourceSize": {"w":64,"h":192}
+},
+{
+	"filename": "Smoke.swf/0003",
+	"frame": {"x":226,"y":768,"w":68,"h":192},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":66,"y":0,"w":68,"h":192},
+	"sourceSize": {"w":68,"h":192}
+},
+{
+	"filename": "Smoke.swf/0004",
+	"frame": {"x":452,"y":0,"w":70,"h":190},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":65,"y":1,"w":70,"h":190},
+	"sourceSize": {"w":70,"h":190}
+},
+{
+	"filename": "Smoke.swf/0005",
+	"frame": {"x":160,"y":0,"w":74,"h":192},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":63,"y":0,"w":74,"h":192},
+	"sourceSize": {"w":74,"h":192}
+},
+{
+	"filename": "Smoke.swf/0006",
+	"frame": {"x":380,"y":0,"w":72,"h":190},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":66,"y":1,"w":72,"h":190},
+	"sourceSize": {"w":72,"h":190}
+},
+{
+	"filename": "Smoke.swf/0007",
+	"frame": {"x":378,"y":190,"w":76,"h":190},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":64,"y":1,"w":76,"h":190},
+	"sourceSize": {"w":76,"h":190}
+},
+{
+	"filename": "Smoke.swf/0008",
+	"frame": {"x":376,"y":382,"w":76,"h":190},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":65,"y":1,"w":76,"h":190},
+	"sourceSize": {"w":76,"h":190}
+},
+{
+	"filename": "Smoke.swf/0009",
+	"frame": {"x":358,"y":572,"w":78,"h":190},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":63,"y":1,"w":78,"h":190},
+	"sourceSize": {"w":78,"h":190}
+},
+{
+	"filename": "Smoke.swf/0010",
+	"frame": {"x":672,"y":374,"w":78,"h":186},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":64,"y":5,"w":78,"h":186},
+	"sourceSize": {"w":78,"h":186}
+},
+{
+	"filename": "Smoke.swf/0011",
+	"frame": {"x":694,"y":186,"w":78,"h":184},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":65,"y":7,"w":78,"h":184},
+	"sourceSize": {"w":78,"h":184}
+},
+{
+	"filename": "Smoke.swf/0012",
+	"frame": {"x":498,"y":570,"w":80,"h":188},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":63,"y":3,"w":80,"h":188},
+	"sourceSize": {"w":80,"h":188}
+},
+{
+	"filename": "Smoke.swf/0013",
+	"frame": {"x":660,"y":562,"w":80,"h":186},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":65,"y":5,"w":80,"h":186},
+	"sourceSize": {"w":80,"h":186}
+},
+{
+	"filename": "Smoke.swf/0014",
+	"frame": {"x":606,"y":752,"w":80,"h":186},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":65,"y":5,"w":80,"h":186},
+	"sourceSize": {"w":80,"h":186}
+},
+{
+	"filename": "Smoke.swf/0015",
+	"frame": {"x":666,"y":0,"w":80,"h":186},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":64,"y":5,"w":80,"h":186},
+	"sourceSize": {"w":80,"h":186}
+},
+{
+	"filename": "Smoke.swf/0016",
+	"frame": {"x":578,"y":566,"w":82,"h":186},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":64,"y":5,"w":82,"h":186},
+	"sourceSize": {"w":82,"h":186}
+},
+{
+	"filename": "Smoke.swf/0017",
+	"frame": {"x":524,"y":758,"w":82,"h":186},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":64,"y":5,"w":82,"h":186},
+	"sourceSize": {"w":82,"h":186}
+},
+{
+	"filename": "Smoke.swf/0018",
+	"frame": {"x":298,"y":0,"w":82,"h":190},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":63,"y":1,"w":82,"h":190},
+	"sourceSize": {"w":82,"h":190}
+},
+{
+	"filename": "Smoke.swf/0019",
+	"frame": {"x":536,"y":188,"w":78,"h":188},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":66,"y":2,"w":78,"h":188},
+	"sourceSize": {"w":78,"h":188}
+},
+{
+	"filename": "Smoke.swf/0020",
+	"frame": {"x":522,"y":0,"w":82,"h":188},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":63,"y":2,"w":82,"h":188},
+	"sourceSize": {"w":82,"h":188}
+},
+{
+	"filename": "Smoke.swf/0021",
+	"frame": {"x":454,"y":190,"w":82,"h":188},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":64,"y":3,"w":82,"h":188},
+	"sourceSize": {"w":82,"h":188}
+},
+{
+	"filename": "Smoke.swf/0022",
+	"frame": {"x":614,"y":188,"w":80,"h":186},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":63,"y":4,"w":80,"h":186},
+	"sourceSize": {"w":80,"h":186}
+},
+{
+	"filename": "Smoke.swf/0023",
+	"frame": {"x":514,"y":378,"w":78,"h":188},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":66,"y":3,"w":78,"h":188},
+	"sourceSize": {"w":78,"h":188}
+},
+{
+	"filename": "Smoke.swf/0024",
+	"frame": {"x":444,"y":762,"w":80,"h":188},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":63,"y":3,"w":80,"h":188},
+	"sourceSize": {"w":80,"h":188}
+},
+{
+	"filename": "Smoke.swf/0025",
+	"frame": {"x":592,"y":376,"w":80,"h":186},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":62,"y":5,"w":80,"h":186},
+	"sourceSize": {"w":80,"h":186}
+},
+{
+	"filename": "Smoke.swf/0026",
+	"frame": {"x":294,"y":768,"w":84,"h":190},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":62,"y":1,"w":84,"h":190},
+	"sourceSize": {"w":84,"h":190}
+},
+{
+	"filename": "Smoke.swf/0027",
+	"frame": {"x":0,"y":0,"w":82,"h":192},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":59,"y":0,"w":82,"h":192},
+	"sourceSize": {"w":82,"h":192}
+},
+{
+	"filename": "Smoke.swf/0028",
+	"frame": {"x":296,"y":192,"w":82,"h":190},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":58,"y":1,"w":82,"h":190},
+	"sourceSize": {"w":82,"h":190}
+},
+{
+	"filename": "Smoke.swf/0029",
+	"frame": {"x":296,"y":382,"w":80,"h":190},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":60,"y":1,"w":80,"h":190},
+	"sourceSize": {"w":80,"h":190}
+},
+{
+	"filename": "Smoke.swf/0030",
+	"frame": {"x":0,"y":576,"w":80,"h":192},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":59,"y":0,"w":80,"h":192},
+	"sourceSize": {"w":80,"h":192}
+},
+{
+	"filename": "Smoke.swf/0031",
+	"frame": {"x":0,"y":384,"w":80,"h":192},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":58,"y":0,"w":80,"h":192},
+	"sourceSize": {"w":80,"h":192}
+},
+{
+	"filename": "Smoke.swf/0032",
+	"frame": {"x":82,"y":0,"w":78,"h":192},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":60,"y":0,"w":78,"h":192},
+	"sourceSize": {"w":78,"h":192}
+},
+{
+	"filename": "Smoke.swf/0033",
+	"frame": {"x":80,"y":192,"w":78,"h":192},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":58,"y":0,"w":78,"h":192},
+	"sourceSize": {"w":78,"h":192}
+},
+{
+	"filename": "Smoke.swf/0034",
+	"frame": {"x":0,"y":192,"w":80,"h":192},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":59,"y":0,"w":80,"h":192},
+	"sourceSize": {"w":80,"h":192}
+},
+{
+	"filename": "Smoke.swf/0035",
+	"frame": {"x":156,"y":384,"w":76,"h":192},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":60,"y":0,"w":76,"h":192},
+	"sourceSize": {"w":76,"h":192}
+},
+{
+	"filename": "Smoke.swf/0036",
+	"frame": {"x":78,"y":768,"w":78,"h":192},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":58,"y":0,"w":78,"h":192},
+	"sourceSize": {"w":78,"h":192}
+},
+{
+	"filename": "Smoke.swf/0037",
+	"frame": {"x":80,"y":576,"w":76,"h":192},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":57,"y":0,"w":76,"h":192},
+	"sourceSize": {"w":76,"h":192}
+},
+{
+	"filename": "Smoke.swf/0038",
+	"frame": {"x":0,"y":768,"w":78,"h":192},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":55,"y":0,"w":78,"h":192},
+	"sourceSize": {"w":78,"h":192}
+},
+{
+	"filename": "Smoke.swf/0039",
+	"frame": {"x":80,"y":384,"w":76,"h":192},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":56,"y":0,"w":76,"h":192},
+	"sourceSize": {"w":76,"h":192}
+},
+{
+	"filename": "Smoke.swf/0040",
+	"frame": {"x":158,"y":192,"w":74,"h":192},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":60,"y":0,"w":74,"h":192},
+	"sourceSize": {"w":74,"h":192}
+},
+{
+	"filename": "Smoke.swf/0041",
+	"frame": {"x":156,"y":576,"w":72,"h":192},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":60,"y":0,"w":72,"h":192},
+	"sourceSize": {"w":72,"h":192}
+},
+{
+	"filename": "Smoke.swf/0042",
+	"frame": {"x":156,"y":768,"w":70,"h":192},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":60,"y":0,"w":70,"h":192},
+	"sourceSize": {"w":70,"h":192}
+},
+{
+	"filename": "Smoke.swf/0043",
+	"frame": {"x":234,"y":0,"w":64,"h":192},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":63,"y":0,"w":64,"h":192},
+	"sourceSize": {"w":64,"h":192}
+},
+{
+	"filename": "Smoke.swf/0044",
+	"frame": {"x":232,"y":192,"w":64,"h":192},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":62,"y":0,"w":64,"h":192},
+	"sourceSize": {"w":64,"h":192}
+},
+{
+	"filename": "Smoke.swf/0045",
+	"frame": {"x":228,"y":576,"w":66,"h":192},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":61,"y":0,"w":66,"h":192},
+	"sourceSize": {"w":66,"h":192}
+},
+{
+	"filename": "Smoke.swf/0046",
+	"frame": {"x":378,"y":762,"w":66,"h":190},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":61,"y":0,"w":66,"h":190},
+	"sourceSize": {"w":66,"h":190}
+},
+{
+	"filename": "Smoke.swf/0047",
+	"frame": {"x":436,"y":572,"w":62,"h":190},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":64,"y":0,"w":62,"h":190},
+	"sourceSize": {"w":62,"h":190}
+},
+{
+	"filename": "Smoke.swf/0048",
+	"frame": {"x":604,"y":0,"w":62,"h":188},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":65,"y":2,"w":62,"h":188},
+	"sourceSize": {"w":62,"h":188}
+}],
+"meta": {
+	"app": "http://www.texturepacker.com",
+	"version": "1.0",
+	"image": "flames.png",
+	"format": "RGBA5555",
+	"size": {"w":772,"h":960},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:250aecde9ac952edf2cc6f73f292618b$"
+}
+}

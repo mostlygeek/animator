@@ -77,7 +77,7 @@ class Animation
     # @canvasContext    - the 2D canvas context to draw this animation into
     # @time             - how long it takes to play all frames
     # @options          - options to control the animation 
-    constructor: (@canvasContext, @time) ->
+    constructor: (@canvasContext, @time, @offsetX, @offsetY) ->
         @startTime = Date.now()
         @lastFrame = 0
    
@@ -102,11 +102,13 @@ class Animation
     
         @lastFrame = curFrame
         tile = @index.frames[curFrame]
+        sSize = tile.spriteSourceSize
         @canvasContext.clearRect 0,0, @canvasContext.canvas.width, @canvasContext.canvas.height
-        @canvasContext.drawImage @img, 
+        @canvasContext.drawImage @img,
             tile.frame.x, tile.frame.y,    # where to clip from @img
             tile.frame.w, tile.frame.h,    # size of the tile x/y
-            0, 0,                          # where to start drawing in the context
+            @offsetX+sSize.x,              # where to position it
+            @offsetY+sSize.y,
             tile.frame.w, tile.frame.h     # the size of the tile to draw
 
         null
@@ -130,22 +132,27 @@ class Animator
 
     init: ->
         elements = document.querySelectorAll "canvas.Animator"
-        for element in elements
-            index   = element.getAttribute "data-index"
-            sprites = element.getAttribute "data-sprites"
-            time    = parseFloat(element.getAttribute("data-time"))
+        for el in elements
+            index   = el.getAttribute "data-index"
+            sprites = el.getAttribute "data-sprites"
+            time    = parseFloat(el.getAttribute("data-time"))
+            dataX = el.getAttribute("data-x")
+            dataY = el.getAttribute("data-y")
+            offsetX = if dataX? then parseInt dataX else 0
+            offsetY = if dataY? then parseInt dataY else 0
+
             
-            @add(element, index, sprites, time)
+            @add(el, index, sprites, time, offsetX, offsetY)
 
     
-    add: (element, jsonIndex, spriteImg, time) ->
+    add: (element, jsonIndex, spriteImg, time, offsetX=0, offsetY=0) ->
         # the animation object created here is bound to the element... 
         # makes it easier to determine if we're adding the same thing over
         return if element.animation?
         
         ctx = element.getContext "2d"
 
-        animation = new Animation(ctx, time)
+        animation = new Animation(ctx, time, offsetX, offsetY)
 
         # attempt to fetch the Json Sprite index
         jXHR = new XMLHttpRequest
