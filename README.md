@@ -1,7 +1,7 @@
 MOVED
 =====
 
-TThis has been largly abandoned for our new [anim8 jQuery plugin](https://github.com/luckyladygames/anim8).
+This has been largly abandoned for our new [anim8 jQuery plugin](https://github.com/luckyladygames/anim8).
 It is here for archive / educational purposes. 
 
 About 
